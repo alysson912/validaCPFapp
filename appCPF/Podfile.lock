@@ -1,0 +1,20 @@
+PODS:
+  - CPF-CNPJ-Validator (1.0.2)
+  - TLCustomMask (2.0.0)
+
+DEPENDENCIES:
+  - CPF-CNPJ-Validator
+  - TLCustomMask
+
+SPEC REPOS:
+  trunk:
+    - CPF-CNPJ-Validator
+    - TLCustomMask
+
+SPEC CHECKSUMS:
+  CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
+  TLCustomMask: 32bcd873851167c2d2a3726b048766b737873710
+
+PODFILE CHECKSUM: 66dcc9b2e0d3145b507d1f408ce7b36177f610cf
+
+COCOAPODS: 1.11.3
