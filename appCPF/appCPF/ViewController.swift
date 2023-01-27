@@ -7,6 +7,7 @@
 
 import UIKit
 import TLCustomMask
+import CPF_CNPJ_Validator
 
 class ViewController: UIViewController {
     
@@ -22,8 +23,6 @@ class ViewController: UIViewController {
         customMaskCPF = TLCustomMask(formattingPattern: "$$$.$$$.$$$-$$")
         
     }
-    
-    
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -40,5 +39,19 @@ extension ViewController: UITextFieldDelegate {
         default:
             return true
         }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // toda validação feita no botao e parte de logica ao terminar de digitar
+        if BooleanValidator().validate(cpf: cpfTextField.text ?? ""){
+            print("CPF VALIDADO")
+        }else{
+            print("CPF INVALIDO, VERIFIQUE OS DADOS E TENTE NOVAMENTE !")
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
